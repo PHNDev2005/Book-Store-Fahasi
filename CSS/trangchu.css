@@ -78,21 +78,108 @@ header {
 /* san pham */
 .sanpham-list {
   padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .sanpham {
   width: 300px;
+  line-height: 25px;
+  margin: 10px;
+}
+.imgsanpham {
+  text-align: center;
+  padding: 20px;
 }
 .sanpham img {
-  width: 250px;
+  height: 220px;
   text-align: center;
 }
-.sanpham-list h1 {
+.title {
   text-align: center;
   padding-bottom: 50px;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
+.sanpham h2 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+}
+.sanpham strong {
+  text-decoration: line-through;
+}
+.sanpham .sale {
+  padding: 5px;
+  background-color: red;
+  border-radius: 8px;
+}
+
+.sanpham .add_shopping {
+  width: 90%;
+  padding: 14px;
+  font-size: 18px;
+  color: rgb(188, 32, 32);
+  border-radius: 10px;
+  background-color: white;
+  border-color: rgb(240, 8, 8);
+  border-width: 3px;
+  margin-left: 12px;
+  margin-top: 20px;
+}
+.sanpham .add_shopping:hover {
+  background-color: rgb(173, 25, 25);
+  color: white;
+  font-weight: 300;
+}
 .sanpham:hover {
-  border-style: solid;
+  /* border-style: solid; */
+  transform: scale(1.03);
+  background-color: aliceblue;
+  transition: 0.5s ease;
+}
+footer {
+  background-color: antiquewhite;
+}
+.footer {
+  background: rgb(191, 216, 144);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.footer-lienhe {
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  gap: 15px;
+}
+
+.footer-lienhe img {
+  width: 30px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.popup-button {
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+}
+
+.popup-button img {
+  width: 50px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 80%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.contact {
+  text-align: center;
+  padding-bottom: 24px;
 }
