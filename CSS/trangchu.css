@@ -1,7 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -41,8 +45,9 @@ header {
   padding: 24px;
 }
 .gio_hang img {
-  width: 28px;
+  width: 48px;
   padding: 10px;
+  cursor: pointer;
 }
 /* Phan main */
 .main {
@@ -183,4 +188,149 @@ footer {
 .contact {
   text-align: center;
   padding-bottom: 24px;
+}
+/* reponsive */
+@media screen and (max-width: 1024px) {
+  .sanpham-list {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+  .main {
+    height: 400px;
+  }
+
+  .about h1 {
+    font-size: 30px;
+  }
+
+  .about h2,
+  .about h3 {
+    font-size: 16px;
+  }
+  .footer-lienhe {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-lienhe > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sanpham {
+    width: 100%;
+    margin: 0 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  .sanpham img {
+    height: auto;
+    max-height: 250px;
+  }
+
+  .sanpham .add_shopping {
+    width: 95%;
+    margin: 10px auto;
+    display: block;
+  }
+  .nav a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .container {
+    align-items: center;
+    padding: 10px 15px;
+  }
+  .gio_hang {
+    padding: 0;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+  .nav-mobile-btn {
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+}
+.nav-mobile-btn,
+.nav-input {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header .container {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .nav-mobile-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+
+    order: 0;
+    margin-right: auto;
+  }
+  .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(246, 243, 195);
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    order: 3;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .nav-input:checked ~ .nav {
+    display: flex;
+  }
+  .nav a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .logo {
+    order: 0;
+  }
+  .gio_hang {
+    order: 0;
+    margin-left: auto;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
